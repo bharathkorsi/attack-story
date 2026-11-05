@@ -1,0 +1,62 @@
+[
+  {
+    "case_id": "CASE-001",
+    "title": "Repeated login failures, success, and admin addition",
+    "user": "alex",
+    "host": "LAB-PC",
+    "assessment": "Requires review; malicious activity undetermined",
+    "reason": "At least five failures within five minutes before success for the same user, host, and IP; Administrators addition within ten minutes for the same user and host.",
+    "evidence": [
+      {
+        "timestamp": "2026-11-05T10:00:00Z",
+        "event_type": "login_failure",
+        "user": "alex",
+        "host": "LAB-PC",
+        "source_ip": "192.0.2.10"
+      },
+      {
+        "timestamp": "2026-11-05T10:01:00Z",
+        "event_type": "login_failure",
+        "user": "alex",
+        "host": "LAB-PC",
+        "source_ip": "192.0.2.10"
+      },
+      {
+        "timestamp": "2026-11-05T10:02:00Z",
+        "event_type": "login_failure",
+        "user": "alex",
+        "host": "LAB-PC",
+        "source_ip": "192.0.2.10"
+      },
+      {
+        "timestamp": "2026-11-05T10:03:00Z",
+        "event_type": "login_failure",
+        "user": "alex",
+        "host": "LAB-PC",
+        "source_ip": "192.0.2.10"
+      },
+      {
+        "timestamp": "2026-11-05T10:04:00Z",
+        "event_type": "login_failure",
+        "user": "alex",
+        "host": "LAB-PC",
+        "source_ip": "192.0.2.10"
+      },
+      {
+        "timestamp": "2026-11-05T10:04:30Z",
+        "event_type": "login_success",
+        "user": "alex",
+        "host": "LAB-PC",
+        "source_ip": "192.0.2.10"
+      },
+      {
+        "timestamp": "2026-11-05T10:06:00Z",
+        "event_type": "group_member_added",
+        "user": "alex",
+        "actor": "lab-admin",
+        "host": "LAB-PC",
+        "group": "Administrators"
+      }
+    ]
+  }
+]

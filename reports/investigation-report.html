@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Attack Story — Investigation Report</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: #101827; color: #e5edf7;
+  font: 16px/1.6 system-ui, sans-serif;
+}
+main { max-width: 1150px; margin: auto; padding: 36px 20px; }
+h1 { font-size: 38px; margin-bottom: 4px; }
+h2 { font-size: 23px; }
+h3 { font-size: 17px; }
+.subtitle, footer { color: #b6c5d8; }
+.stats { display: flex; flex-wrap: wrap; gap: 16px; margin: 26px 0; }
+.stat, section {
+  background: #1a2638; border: 1px solid #34465f;
+  border-radius: 12px; padding: 22px;
+}
+.stat { flex: 1; min-width: 180px; }
+.stat strong { display: block; font-size: 28px; color: #78e2ce; }
+section { margin-bottom: 24px; }
+.badge {
+  display: inline-block; background: #503b18; color: #ffdb8d;
+  padding: 4px 12px; border-radius: 20px; font-size: 12px;
+}
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { text-align: left; padding: 12px; border-bottom: 1px solid #34465f; }
+th { color: #78e2ce; }
+.assessment { border-left: 3px solid #ffdb8d; padding-left: 12px; }
+@media print {
+  body { background: white; color: black; }
+  .stat, section { background: white; color: black; }
+}
+</style>
+</head>
+<body><main>
+<h1>Attack Story</h1>
+<p class="subtitle">Automated security event correlation and investigation evidence</p>
+
+<div class="stats">
+  <div class="stat"><strong>1</strong>Generated cases</div>
+  <div class="stat">
+    <strong>10/10</strong>
+    Saved validation results
+  </div>
+  <div class="stat"><strong>Synthetic</strong>Demonstration data</div>
+</div>
+
+        <section>
+          <span class="badge">REQUIRES REVIEW</span>
+          <h2>CASE-001: Repeated login failures, success, and admin addition</h2>
+          <p><strong>Account:</strong> alex
+          &nbsp; <strong>Host:</strong> LAB-PC</p>
+          <h3>Why these events were connected</h3>
+          <p>At least five failures within five minutes before success for the same user, host, and IP; Administrators addition within ten minutes for the same user and host.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr>
+                <th>Time</th><th>Event</th><th>User</th>
+                <th>Host</th><th>Details</th>
+              </tr></thead>
+              <tbody><tr><td>2026-11-05T10:00:00Z</td><td>login_failure</td><td>alex</td><td>LAB-PC</td><td>source_ip: 192.0.2.10</td></tr><tr><td>2026-11-05T10:01:00Z</td><td>login_failure</td><td>alex</td><td>LAB-PC</td><td>source_ip: 192.0.2.10</td></tr><tr><td>2026-11-05T10:02:00Z</td><td>login_failure</td><td>alex</td><td>LAB-PC</td><td>source_ip: 192.0.2.10</td></tr><tr><td>2026-11-05T10:03:00Z</td><td>login_failure</td><td>alex</td><td>LAB-PC</td><td>source_ip: 192.0.2.10</td></tr><tr><td>2026-11-05T10:04:00Z</td><td>login_failure</td><td>alex</td><td>LAB-PC</td><td>source_ip: 192.0.2.10</td></tr><tr><td>2026-11-05T10:04:30Z</td><td>login_success</td><td>alex</td><td>LAB-PC</td><td>source_ip: 192.0.2.10</td></tr><tr><td>2026-11-05T10:06:00Z</td><td>group_member_added</td><td>alex</td><td>LAB-PC</td><td>actor: lab-admin | group: Administrators</td></tr></tbody>
+            </table>
+          </div>
+          <p class="assessment">Requires review; malicious activity undetermined</p>
+        </section>
+        
+<footer>
+<p>Portfolio prototype. Related events are investigation leads;
+they do not establish compromise or causation.</p>
+<p>Case data: incident-cases.json · Test results: correlation-validation.json.
+These files are generated separately; rerun both before sharing.</p>
+</footer>
+</main></body></html>

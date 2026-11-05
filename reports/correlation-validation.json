@@ -1,0 +1,17 @@
+{
+  "total": 10,
+  "passed": 10,
+  "failed": 0,
+  "results": [
+    "PASS: Complete sequence | expected=1, actual=1",
+    "PASS: Only four failures | expected=0, actual=0",
+    "PASS: Failures outside five-minute window | expected=0, actual=0",
+    "PASS: Group addition for different user | expected=0, actual=0",
+    "PASS: Group addition on different host | expected=0, actual=0",
+    "PASS: Successful login from different IP | expected=0, actual=0",
+    "PASS: Group addition exactly ten minutes later | expected=1, actual=1",
+    "PASS: Group addition beyond ten minutes | expected=0, actual=0",
+    "PASS: Four failures plus duplicate must not trigger | expected=0, actual=0",
+    "PASS: Duplicate failure excluded from case evidence | expected=1, actual=1"
+  ]
+}
