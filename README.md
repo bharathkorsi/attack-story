@@ -6,6 +6,9 @@ A Python security automation prototype that connects repeated
 login failures, a successful login, and an Administrators group
 addition, then generates a JSON case and an HTML investigation report.
 
+
+![Attack Story investigation report](screenshots/attack-story-demo.png)
+
 ## Demo Scenario
 
 Eight fictional events produce one case containing seven related
